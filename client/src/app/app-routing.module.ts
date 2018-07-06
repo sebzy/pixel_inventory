@@ -1,10 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
-import { AppComponent } from './app.component';
-
-import { AppRoutingModule } from './/app-routing.module';
+import { NgModule }             from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 import { NewCustomersComponent } from './customers/new-customers/new-customers.component';
 import { ViewCustomersComponent } from './customers/view-customers/view-customers.component';
 import { SalesReturnsComponent } from './sales/sales-returns/sales-returns.component';
@@ -24,34 +20,84 @@ import { ViewSuppliersComponent } from './suppliers/view-suppliers/view-supplier
 import { NewSupplierComponent } from './suppliers/new-supplier/new-supplier.component';
 
 
+
+const routes: Routes = [
+  {
+    path: 'app-new-customers',
+    component: NewCustomersComponent,
+},
+  {
+      path: 'app-view-customers',
+      component: ViewCustomersComponent,
+  },
+  {
+    path: 'app-new-product',
+    component: NewProductComponent,
+},
+{
+  path: 'app-stock-changes',
+  component: StockChangesComponent,
+},
+{
+  path: 'app-stock-take',
+  component: StockTakeComponent,
+},
+{
+  path: 'app-view-products',
+  component: ViewProductsComponent,
+},
+{
+  path: 'app-view-stock',
+  component: ViewStockComponent,
+},
+{
+  path: 'app-new-purchase',
+  component: NewPurchaseComponent,
+},
+{
+  path: 'app-reorder',
+  component: ReorderComponent,
+},
+{
+  path: 'app-view-purchases',
+  component: ViewPurchasesComponent,
+},
+{
+  path: 'app-new-quote',
+  component: NewQuoteComponent,
+},
+{
+  path: 'app-sales-returns',
+  component: SalesReturnsComponent,
+},
+{
+  path: 'app-view-quotes',
+  component: ViewQuotesComponent,
+},
+{
+  path: 'app-view-sales',
+  component: ViewSalesComponent,
+},
+{
+  path: 'app-new-supplier',
+  component: NewSupplierComponent,
+},
+{
+  path: 'app-view-suppliers',
+  component: ViewSuppliersComponent,
+},
+];
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    NewCustomersComponent,
-    ViewCustomersComponent,
-    SalesReturnsComponent,
-    ViewSalesComponent,
-    NewSaleComponent,
-    ViewQuotesComponent,
-    NewQuoteComponent,
-    ViewProductsComponent,
-    NewProductComponent,
-    StockChangesComponent,
-    StockTakeComponent,
-    ViewStockComponent,
-    ReorderComponent,
-    ViewPurchasesComponent,
-    NewPurchaseComponent,
-    ViewSuppliersComponent,
-    NewSupplierComponent,
-    
-  ],
   imports: [
-    BrowserModule,
-    NgbModule.forRoot(),
-    AppRoutingModule
+    CommonModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+
+  exports: [
+    RouterModule
+],
+
+  declarations: []
 })
-export class AppModule { }
+export class AppRoutingModule { }
