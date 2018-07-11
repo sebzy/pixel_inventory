@@ -39,118 +39,93 @@
       <div class="card" style="width: 12rem;">
         <div class="card-body">
           <h5 class="card-title">Suppliers</h5>
-          <div class="card-header">
-              Enter a new supplier
-            </div>
-          <p class="card-text"></p>
           
-          <div class="card-header">
-              View suppliers
-          </div>
-          <p class="card-text"></p>
+          <div class="btn-group" ngbDropdown>
+              <button type="button" class="btn btn-secondary dropdown-toggle" ngbDropdownToggle>
+                  select below          
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item"  routerLink="/app-new-supplier">New supplier</a> 
+                <a  class="dropdown-item"  routerLink="/app-view-suppliers">View suppliers</a> 
+              </div>
+            </div>
+        </div>
+      
          
         </div>
-      </div>
-    </div>
-  
+      </div> 
+      
   <!-- purchases component -->
   <div class="col-sm">
+      
       
       <div class="card" style="width: 12rem;">
         <div class="card-body">
           <h5 class="card-title">Purchases</h5>
-          <div class="card-header">
-              New purchase
-          </div>
-          <p class="card-text"></p>
-  
-          <div class="card-header">
-              View purchases
-          </div>
-          <p class="card-text"></p>
-  
-          <div class="card-header">
-              Reorder
-          </div>
-          <p class="card-text"></p>
+
+          <div class="btn-group" ngbDropdown>
+              <button type="button" class="btn btn-secondary dropdown-toggle" ngbDropdownToggle>
+                  select below      
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item"  routerLink="/app-new-purchase">New purchase</a> 
+                <a  class="dropdown-item"  routerLink="/app-view-purchases">View purchases</a> 
+                <a  class="dropdown-item"  routerLink="/app-reorder">Reorder</a> 
+              </div>
+            </div>
         </div>
-      </div>
+      </div> 
   
     </div>
     <!-- Inventory component -->
     <div class="col-sm">
       
-        <div class="card" style="width: 12rem;">
+         <div class="card" style="width: 12rem;">
           <div class="card-body">
             <h5 class="card-title">Inventory</h5>
+            <span data-feather="shopping-cart"></span>
     
-            <div class="card-header">
-                View Stock
-            </div>
-            <p class="card-text"></p>
-    
-            <div class="card-header">
-                Stock Take
-            </div>
-            <p class="card-text"></p>
-    
-            <div class="card-header">
-                Stock Tranfers
-            </div>
-            <p class="card-text"></p>
-    
-            <div class="card-header">
-                Stock Changes
-            </div>
-            <p class="card-text"></p>
-    
-            <div class="card-header">
-                New Product
-            </div>
-            <p class="card-text"></p>
-    
-            <div class="card-header">
-                View Products
-            </div>
-            <p class="card-text"></p>
+            <div class="btn-group" ngbDropdown>
+                <button type="button" class="btn btn-secondary dropdown-toggle" ngbDropdownToggle>
+                  select below      
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                  <a class="dropdown-item"  routerLink="/app-view-stock">View Stock</a> 
+                  <a  class="dropdown-item"  routerLink="/app-stock-take"> Stock Take</a> 
+                  <a  class="dropdown-item"  routerLink="/app-stock-tranfer">Stock Tranfers</a> 
+                  <a class="dropdown-item"  routerLink="/app-stock-changes">Stock Changes</a> 
+                  <a  class="dropdown-item"  routerLink="/app-new-product">New Product</a> 
+                  <a  class="dropdown-item"  routerLink="/app-view-products"> View Products</a> 
+                </div>
+              </div>
           </div>
-        </div>
+        </div> 
+        
     
       </div>
 <!-- sales component     -->
 <div class="col-sm">
       
-    <div class="card" style="width: 12rem;">
+     <div class="card" style="width: 12rem;">
       <div class="card-body">
         <h5 class="card-title">Sales</h5>
 
-        <div class="card-header">
-            New Qoute
-        </div>
-        <p class="card-text"></p>
-
-        <div class="card-header">
-            View Quotes
-        </div>
-        <p class="card-text"></p>
-
-        <div class="card-header">
-            New Sale
-        </div>
-        <p class="card-text"></p>
-
-        <div class="card-header">
-            View Sales
-        </div>
-        <p class="card-text"></p>
-
-        <div class="card-header">
-            Sale returns
-        </div>
-        <p class="card-text"></p>
+        <div class="btn-group" ngbDropdown>
+            <button type="button" class="btn btn-secondary dropdown-toggle" ngbDropdownToggle>
+                Select below        
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu> 
+              <a  class="dropdown-item"  routerLink="/app-new-quote"> New Qoute</a> 
+              <a  class="dropdown-item"  routerLink="/app-view-quotes">View Quotes</a> 
+              <a class="dropdown-item"  routerLink="/app-new-sale"> New Sale</a> 
+              <a  class="dropdown-item"  routerLink="/app-view-sales">View Sales</a> 
+              <a  class="dropdown-item"  routerLink="/app-sales-returns"> Sale returns</a> 
+            </div>
+          </div>
 
       </div>
-    </div>
+    </div> 
+  
 
   </div>
   <!-- customers component -->
@@ -160,19 +135,25 @@
         <div class="card-body">
           <h5 class="card-title">Customers</h5>
   
-          <div class="card-header">
-              New Customer
-          </div>
-          <p class="card-text"></p>
-  
-          <div class="card-header">
-              View Customers
-          </div>
-          <p class="card-text"></p>
+         
+          
+          <div class="btn-group" ngbDropdown>
+              <button type="button" class="btn btn-secondary dropdown-toggle" ngbDropdownToggle>
+                  Select below          
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                <a class="dropdown-item"  routerLink="/app-new-customers">New Customer</a> 
+                <a  class="dropdown-item"  routerLink="/app-view-customers">View Customers</a> 
+              </div>
+            </div>
   
         </div>
       </div>
   
     </div>
   </div>
+
+
+
+  <router-outlet></router-outlet>
 </div>

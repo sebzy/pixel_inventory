@@ -86,6 +86,10 @@ const routes: Routes = [
   path: 'app-view-suppliers',
   component: ViewSuppliersComponent,
 },
+{
+  path: 'app-new-sale',
+  component: NewSaleComponent,
+},
 ];
 
 @NgModule({
