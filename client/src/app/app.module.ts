@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {HttpClientModule} from "@angular/common/http";
+
 
 import { AppComponent } from './app.component';
 
@@ -24,6 +28,7 @@ import { ViewSuppliersComponent } from './suppliers/view-suppliers/view-supplier
 import { NewSupplierComponent } from './suppliers/new-supplier/new-supplier.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,12 +48,18 @@ import { NewSupplierComponent } from './suppliers/new-supplier/new-supplier.comp
     ViewPurchasesComponent,
     NewPurchaseComponent,
     ViewSuppliersComponent,
-    NewSupplierComponent,
+    NewSupplierComponent
+
     
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpModule,
+    HttpClientModule,
     NgbModule.forRoot(),
+    
     AppRoutingModule
   ],
   providers: [],

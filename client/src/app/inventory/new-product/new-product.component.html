@@ -1,57 +1,93 @@
 <div class="card text-center">
   <div class="card-header">
-    Add new product
+    New product
   </div>
   <div class="card-body">
-    <form>
+    <form [formGroup]="formdata"  (ngSubmit)="onSubmit(formdata.value)">
       <div class="form-group row">
-        <label class="col-md-4 control-label" for="textinput">Product name</label> 
+        <label class="col-md-4 control-label" for="textinput">Product Name</label> 
         <div class="col-sm-4">
-          <input type="email" class="form-control" formControlName="product_name"  placeholder="">
+          <input type="text" class="form-control" formControlName="product_name"   placeholder="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">SKU</label> 
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="sku"   placeholder="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">Supplier</label> 
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="supplier"   placeholder="" >
         </div>
       </div>
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Description</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="description"  placeholder="">
+          <input type="text" class="form-control" formControlName="description"   placeholder=""  >
         </div>
       </div>
 
       <div class="form-group row">
-        <label class="col-md-4 control-label" for="textarea">Price unit</label>
+        <label class="col-md-4 control-label" for="textarea">Cost Price</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="price_unit"  placeholder="">
+          <input type="text" class="form-control" formControlName="cost_px"  placeholder="" >
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textarea">Selling Price</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="selling_px"  placeholder="" >
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textarea">Stock On Hand</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="stock_on_hand"  placeholder="" >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Category</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="category" placeholder="">
+          <input type="text" class="form-control" formControlName="category" placeholder="" >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Comment</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="comment"  placeholder="">
+          <input type="text" class="form-control" formControlName="comment"  placeholder=""  >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Approved By</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="approved_by" placeholder="">
+          <input type="text" class="form-control" formControlName="approved_by"  placeholder="" >
         </div>
       </div>
      
     
       <div class="form-group row">
         <div class="col-sm-4">
-          <button type="submit"   class="btn btn-primary">Add Product</button>
+          <button   type="submit"   class="btn btn-primary">  Add Product</button>
+         
         </div>
       </div>
     </form>
+    <div class="form-group row">
+      <div class="col-sm-4">
+        <div>
+          <h2>Model:</h2>
+          {{ product_name}}
+        </div>
+        
+      </div>
+    </div>
   </div>
   <div class="card-footer text-muted">
   
