@@ -24,5 +24,9 @@
   },
   "engines": {
     "node": "10.4.1"
-  }
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

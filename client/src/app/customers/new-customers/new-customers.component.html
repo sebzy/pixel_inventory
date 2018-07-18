@@ -1,3 +1,78 @@
-<p>
-  new-customers works!
-</p>
+<div class="card text-center">
+  <div class="card-header">
+    New Customer
+  </div>
+  <div class="card-body">
+    <form [formGroup]="formdata"  (ngSubmit)="onSubmit(formdata.value)">
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">Company Name</label> 
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="product_name"   placeholder="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">Company Type</label> 
+        <div class="col-sm-4">
+            <select class="custom-select d-block w-100" id="country" required>
+                <option value="">Choose...</option>
+                <option>Business Customer</option>
+                <option>Consumer</option>
+              </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">Company Code</label> 
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="supplier"   placeholder="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textarea">Company Phone no</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="description"   placeholder=""  >
+        </div>
+      </div>
+      <div class="form-group row">
+          <label class="col-md-4 control-label" for="textarea">Company website</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="description"   placeholder=""  >
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-md-4 control-label" for="textarea">Company email </label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" formControlName="description"   placeholder=""  >
+            </div>
+          </div>
+          
+        <div class="form-group row">
+            <label class="col-md-4 control-label" for="textarea">Description</label>
+            <div class="col-sm-4">
+                <textarea type="text" class="form-control" rows="5" id="comment"></textarea>
+            </div>
+          </div>
+
+         
+    
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <button   type="submit"   class="btn btn-primary">  Add Customer</button>
+         
+        </div>
+      </div>
+    </form>
+    <div class="form-group row">
+      <div class="col-sm-4">
+        <div>
+          <h2>Model:</h2>
+          {{ product_name}}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+  
+  </div>
+</div>

@@ -1,3 +1,136 @@
-<p>
-  new-purchase works!
-</p>
+<div class="card text-center">
+  <div class="card-header">
+    New Purchase Order
+  </div>
+  <div class="card-body">
+    <form [formGroup]="formdata"  (ngSubmit)="onSubmit(formdata.value)">
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">Select Supplier</label> 
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="product_name"   placeholder="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">Stock Due</label> 
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="sku"   placeholder="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textinput">Reference</label> 
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="supplier"   placeholder="" >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textarea">Email</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="description"   placeholder=""  >
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textarea">Select Currency</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="description"   placeholder=""  >
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textarea">Select Price List</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="description"   placeholder=""  >
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-4 control-label" for="textarea">Totals are</label>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" formControlName="description"   placeholder="select ,tax inclusive"  >
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 mb-2">
+          <label for="cc-expiration">Item Name</label>
+          <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+          <div class="invalid-feedback">
+            required
+          </div>
+        </div>
+        <div class="col-md-2 mb-2">
+          <label for="cc-cvv">Quantity</label>
+          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+          <div class="invalid-feedback">
+            required
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-2">
+          <label for="cc-cvv">Item Cost</label>
+          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+          <div class="invalid-feedback">
+            required
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-2">
+          <label for="cc-cvv">Tax</label>
+          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+          <div class="invalid-feedback">
+             
+          </div>
+        </div>
+
+        <div class="col-md-2 mb-2">
+          <label for="cc-cvv">Total</label>
+          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+          <div class="invalid-feedback">
+             required
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-2">Add item</button>
+        </div>
+      </div>
+    
+      <div class="form-group row">
+      <div class="col-sm-6">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+
+      <div class="col-sm-4">
+        <ul class="list-group">
+            <label for="comment">TOTALS:</label>
+          <li class="list-group-item">Total units</li>
+          <li class="list-group-item">Sub Total</li>
+          <li class="list-group-item">Total</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="form-group row">
+        <div class="col-sm-4">
+          <button   type="submit"   class="btn btn-primary"> Create</button>
+          <div class="invalid-feedback">
+            
+         </div>
+        </div>
+      </div>
+    </form>
+    <div class="form-group row">
+      <div class="col-sm-4">
+        <div>
+          <h2>Model:</h2>
+          {{ product_name}}
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+  
+  </div>
+</div>
