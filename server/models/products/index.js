@@ -4,13 +4,17 @@ const Schema = mongoose.Schema;
 //Define ProductSchema
 const ProductSchema = new Schema({
 	name: String,
+	sku: String,
+	supplier: String,
 	description: String,
 	createdAt: {type: Date, default: Date.now},
 	category: String,
 	status: {type: Boolean, default: true},
-	unitcost: Number,
-	price: Number,
-	numberavailable: Number
+	sellingPrice: Number,
+	costPrice: Number,
+	stockAtHand: Number,
+	comment: String,
+	approvedBy: String
 });
 
 //Export ProductSchema
