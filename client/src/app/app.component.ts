@@ -13,7 +13,7 @@ export class AppComponent {
  constructor(private http: HttpClient) {}
  ngOnInit(): void {
    // Make the HTTP request:
-   this.http.get('https://jsonplaceholder.typicode.com').subscribe(data => {
+   this.http.get('http://localhost:8888/api/v1/products').subscribe(data => {
      console.log(data);
    });
  }
