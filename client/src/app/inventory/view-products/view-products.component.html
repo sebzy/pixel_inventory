@@ -8,195 +8,31 @@
         <thead>
           <tr>
             <th>Product name</th>
-            <th>SKU</th>
-            <th>Suppier</th>
+            <!-- <th>SKU</th> -->
+            <!-- <th>Supplier</th> -->
             <th>Description</th>
             <th>Cost Price</th>
             <th>Selling Price</th>
             <th>Stock On Hand</th>
             <th>Category</th>
-            <th>Comment</th>
-            <th>Approved by</th>
+            <!-- <th>Comment</th> -->
+            <!-- <th>Approved by</th> -->
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1,001</td>
-            <td>Lorem</td>
-            <td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td> <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
+          <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <!-- <td>Lorem</td> -->
+            <!-- <td>ipsum</td> -->
+            <td>{{product.description}}</td>
+            <td>{{product.unitcost}}</td>
+            <td>{{product.price}}</td>
+             <td>{{product.numberavailable}}</td>
+            <td>{{product.category}}</td>
+            <!-- <td>Mauris</td> -->
+            <!-- <td>sit</td> -->
           </tr>
-          <tr>
-            <td>1,002</td>
-            <td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-            <td>amet</td>
-            <td>consectetur</td>
-            <td>adipiscing</td>
-            <td>elit</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,003</td>
-            <td>Integer</td>
-            <td>nec</td>
-            <td>odio</td>
-            <td>Praesent</td>
-            <td>sit</td><td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,003</td>
-            <td>libero</td>
-            <td>Sed</td>
-            <td>cursus</td>
-            <td>ante</td>
-            <td>sit</td><td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,004</td>
-            <td>dapibus</td>
-            <td>diam</td>
-            <td>Sed</td>
-            <td>nisi</td>
-            <td>sit</td><td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,005</td>
-            <td>Nulla</td><td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-            <td>quis</td>
-            <td>sem</td>
-            <td>at</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,006</td>
-            <td>nibh</td>
-            <td>elementum</td><td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-            <td>imperdiet</td>
-            <td>Duis</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,007</td>
-            <td>sagittis</td>
-            <td>ipsum</td>
-            <td>Praesent</td><td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-            <td>mauris</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,008</td>
-            <td>Fusce</td>
-            <td>nec</td>
-            <td>tellus</td>
-            <td>sed</td><td>ipsum</td>
-            <td>dolor</td>
-            <td>sit</td>
-            <td>sit</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,009</td>
-            <td>augue</td>
-            <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
-          </tr> <td>semper</td>
-          <td>porta</td>
-          <td>Mauris</td>
-          <td>sit</td>
-          <tr>
-            <td>1,010</td>
-            <td>massa</td>
-            <td>Vestibulum</td>
-            <td>lacinia</td>
-            <td>arcu</td> <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,011</td>
-            <td>eget</td>
-            <td>nulla</td>
-            <td>Class</td> <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
-            <td>aptent</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,012</td>
-            <td>taciti</td>
-            <td>sociosqu</td>
-            <td>ad</td>
-            <td>litora</td> <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,013</td>
-            <td>torquent</td>
-            <td>per</td> <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
-            <td>conubia</td>
-            <td>nostra</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,014</td>
-            <td>per</td>
-            <td>inceptos</td>
-            <td>himenaeos</td>
-            <td>Curabitur</td>
-            <td>sit</td> <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
-          </tr>
-          <tr>
-            <td>1,015</td>
-            <td>sodales</td>
-            <td>ligula</td>
-            <td>in</td>
-            <td>libero</td>
-            <td>sit</td> <td>semper</td>
-            <td>porta</td>
-            <td>Mauris</td>
-            <td>sit</td>
-          </tr>
+          
         </tbody>
       </table>
     </div>

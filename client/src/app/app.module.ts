@@ -4,6 +4,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {HttpClientModule} from "@angular/common/http";
+// import { Http ,Headers } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { NewSupplierComponent } from './suppliers/new-supplier/new-supplier.comp
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,9 @@ import { NewSupplierComponent } from './suppliers/new-supplier/new-supplier.comp
     ViewPurchasesComponent,
     NewPurchaseComponent,
     ViewSuppliersComponent,
+    
     NewSupplierComponent
+
 
     
   ],
@@ -58,6 +62,10 @@ import { NewSupplierComponent } from './suppliers/new-supplier/new-supplier.comp
     FormsModule,
     HttpModule,
     HttpClientModule,
+    // Http ,
+    // Headers,
+    
+    
     NgbModule.forRoot(),
     
     AppRoutingModule
@@ -65,4 +73,7 @@ import { NewSupplierComponent } from './suppliers/new-supplier/new-supplier.comp
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+  
+ }
