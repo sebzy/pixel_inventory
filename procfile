@@ -1,3 +1,0 @@
-client: client/ng serve
-server: node server/bin/www
-
