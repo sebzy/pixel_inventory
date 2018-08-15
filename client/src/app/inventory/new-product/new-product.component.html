@@ -1,81 +1,87 @@
-<div class="card text-center">
-  <div class="card-header">
+<div class="card text-center" *ngIf="product"  >
+  <!-- <div class="card-header">
     New product
+  </div> -->
+  <div class="col-md-12">
+    <!-- <h2 *ngIf="product._id">Product Details</h2> -->
+    <h2> New product</h2>
   </div>
   <div class="card-body">
-    <form [formGroup]="formdata"  (ngSubmit)="onSubmit(formdata.value)">
+    <form >
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textinput">Product Name</label> 
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="product_name"   placeholder="" >
+          <input type="text" class="form-control" name="product-productName"  [(ngModel)]="product.productName"   placeholder="" >
         </div>
       </div>
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textinput">SKU</label> 
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="sku"   placeholder="" >
+          <input type="text" class="form-control" name="product-sku" [(ngModel)]="product.sku"   placeholder="" >
         </div>
       </div>
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textinput">Supplier</label> 
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="supplier"   placeholder="" >
+          <input type="text" class="form-control" name="product-supplier"  [(ngModel)]="product.supplier"   placeholder="" >
         </div>
       </div>
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Description</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="description"   placeholder=""  >
+          <input type="text" class="form-control"  name="product-description"  [(ngModel)]="product.description"   placeholder=""  >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Cost Price</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="cost_px"  placeholder="" >
+          <input type="number" class="form-control" name="product-costPx" [(ngModel)]="product.costPx"  placeholder="" >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Selling Price</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="selling_px"  placeholder="" >
+          <input type="number" class="form-control" name="product-sellingPx" [(ngModel)]="product.sellingPx"  placeholder="" >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Stock On Hand</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="stock_on_hand"  placeholder="" >
+          <input type="number" class="form-control" name="product-stockOnHand"  [(ngModel)]="product.stockOnHand"  placeholder="" >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Category</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="category" placeholder="" >
+          <input type="text" class="form-control" name="product-category" [(ngModel)]="product.category" placeholder="" >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Comment</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="comment"  placeholder=""  >
+          <input type="text" class="form-control" name="product-comment" [(ngModel)]="product.comment"  placeholder=""  >
         </div>
       </div>
 
       <div class="form-group row">
         <label class="col-md-4 control-label" for="textarea">Approved By</label>
         <div class="col-sm-4">
-          <input type="text" class="form-control" formControlName="approved_by"  placeholder="" >
+          <input type="text" class="form-control" name="product-approvedBy" [(ngModel)]="product.approvedBy"  placeholder="" >
         </div>
       </div>
      
     
       <div class="form-group row">
         <div class="col-sm-4">
-          <button   type="submit"   class="btn btn-primary">  Add Product</button>
          
+    <button class="btn btn-primary"  (click)="createProduct(product)">Create</button>
+    <!-- <button class="btn btn-info" *ngIf="product._id" (click)="updateProduct(product)">Update</button>
+    <button class="btn btn-danger" *ngIf="product._id" (click)="deleteProduct(product._id)">Delete</button> -->
         </div>
       </div>
     </form>
@@ -83,7 +89,7 @@
       <div class="col-sm-4">
         <div>
           <h2>Model:</h2>
-          {{ product_name}}
+          <!-- {{ product_name}} -->
         </div>
         
       </div>

@@ -9,7 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { NewCustomersComponent } from './customers/new-customers/new-customers.component';
 import { ViewCustomersComponent } from './customers/view-customers/view-customers.component';
 import { SalesReturnsComponent } from './sales/sales-returns/sales-returns.component';

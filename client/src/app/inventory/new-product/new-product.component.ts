@@ -1,69 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, Input} from '@angular/core';
 import {DataService } from '../../data.service';
-import { Http ,Headers } from '@angular/http';
+import { Product } from './Product';
 
 
 @Component({
   selector: 'app-new-product',
   templateUrl: './new-product.component.html',
-  styleUrls: ['./new-product.component.css']
+  styleUrls: ['./new-product.component.css'],
+  providers: [DataService]
 })
 
 
 
-export class NewProductComponent implements OnInit {
-  product_name;
-  formdata;
-  AddProduct;
-  Product:any;
-  products;
-  postProducts;
+export class NewProductComponent {
+  @Input()
+  product : Product = <Product>{};
 
+  @Input()
+  createHandler: Function;
+  @Input()
+  updateHandler: Function;
+  @Input()
+  deleteHandler: Function;
+  
+    constructor(private dataService: DataService) { }
+  
 
-  constructor(private http: Http) { 
-
-    
-  }
-
-  ngOnInit() {
-    this.formdata = new FormGroup({
-      product_name: new FormControl(""),
-      sku: new FormControl(""),
-      supplier: new FormControl(""),
-      description: new FormControl(""),
-      cost_px: new FormControl(""),
-      selling_px: new FormControl(""),
-      stock_on_hand: new FormControl(""),
-      category: new FormControl(""),
-      comment: new FormControl(""),
-      approved_by: new FormControl("")
-
-   });
-
-   this.http.get("http://localhost:8888/api/v1/products").subscribe(data => {
-    return this.products = data.json();
-  });
-}
+    createProduct(product: Product) {
+      this.dataService.createProduct(product).then((newProduct: Product) => {
+        console.log(product);
+        this.createHandler(newProduct);
+      });
+    }
+  
+    updateProduct(product: Product): void {
+      this.dataService.updateProduct(product).then((updatedProduct: Product) => {
+        this.updateHandler(updatedProduct);
+      });
+    }
+  
+    deleteProduct(productId: String): void {
+      this.dataService.deleteProduct(productId).then((deletedProductId: String) => {
+        this.deleteHandler(deletedProductId);
+      });
+    }
 
  
-
-
-  onSubmit(data) {
-    this.product_name = data.product_name;
-    console.log(data);
-    this.postProducts = data;
-
-    // By default, a newly-created product will have the selected state.
-
-     this.Product ='http://localhost:8888/api/v1/product/create';
-    //this.AddProduct(data);
-
-    this.AddProduct = () => {
-      this.Product.push(this.postProducts);
-      //this.selectContact(contact);
-      return this.postProducts;
-    }
-  }
-
 }
+
+
