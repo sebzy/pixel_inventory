@@ -17,6 +17,7 @@
             <th>Category</th>
             <th>Comment</th>
             <th>Approved by</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +32,7 @@
             <td>{{productx.category}}</td>
             <td>{{productx.comment}}</td>
             <td>{{productx.approvedBy}}</td>
+            <td><button class="btn btn-danger"  (click)="deleteProduct(productx._id)">Delete</button></td>
           </tr>
           
         </tbody>

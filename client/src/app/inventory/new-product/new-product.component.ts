@@ -41,6 +41,7 @@ export class NewProductComponent {
   
     deleteProduct(productId: String): void {
       this.dataService.deleteProduct(productId).then((deletedProductId: String) => {
+        console.log(productId);
         this.deleteHandler(deletedProductId);
       });
     }

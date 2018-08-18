@@ -28,9 +28,14 @@ export class ViewProductsComponent implements OnInit {
        });
      });
  }
+ 
+
+ deleteProduct(productId: String): void {
+  this.dataService.deleteProduct(productId).then((deletedProductId: String) => {
+    // console.log(productId);
   
-
-
+  });
+}
  
 //  private getIndexOfProduct = (productId: String) => {
 //   return this.products.findIndex((product) => {

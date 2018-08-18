@@ -64,8 +64,9 @@ export class DataService {
   ///handling errors
   private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
-    error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+    error.status ? `${error.status} - ${error.statusText}` : "Server error";
     console.error(errMsg); // log to console instead
+    console.log(error.message);
   }
    
 
