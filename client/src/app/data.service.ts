@@ -13,7 +13,7 @@ export class DataService {
 
   private putUrl = 'http://localhost:8888/api/v1/product/create';
  
-  private delUrl ='http://localhost:8888/api/v1/product/5b3a2ac413317a1021c0b1f0';
+  private delUrl ='http://localhost:8888/api/v1/product';
 
   private editUrl ='http://localhost:8888/api/v1/product/5b3a2ac413317a1021c0b1f0';
 
@@ -44,7 +44,8 @@ export class DataService {
 
   // delete("/api/Products/")
   deleteProduct(delProductId: String): Promise<void | String> {
-    return this.http.delete(this.delUrl)
+    console.log(delProductId);
+    return this.http.delete(this.delUrl+"/"+delProductId)
                .toPromise()
                .then(response => response.json() as String)
                .catch(this.handleError);
@@ -66,7 +67,7 @@ export class DataService {
     let errMsg = (error.message) ? error.message :
     error.status ? `${error.status} - ${error.statusText}` : "Server error";
     console.error(errMsg); // log to console instead
-    console.log(error.message);
+    // console.log(error.message);
   }
    
 
